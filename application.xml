@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<!-- NMML reference: https://gist.github.com/1763850 -->
+	
+	<!-- metadata, make sure 'package' is at least 3 segments (ie. com.mycompany.myproject) -->
+	<meta title="motorSFX" package="com.game.motorSFX" version="1.0.0" company="Colapsydo" />
+	
+	<!-- output -->
+	<app main="com.game.Main" file="motorSFX" path="bin" />
+	
+	<window background="#000000" fps="60" />
+	<window width="800" height="480" unless="mobile" />
+	<window orientation="landscape" vsync="false" antialiasing="0" if="cpp" />
+	
+	<!-- classpath, haxe libs -->
+	<source path="src" />
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+	
+	<!-- assets -->
+	<icon path="assets/openfl.svg" />
+	<assets path="assets/img" rename="img" />
+	
+	<assets path="Assets/sounds" rename="sounds" if="web">
+		<sound path="stdby.wav" id="stdby" />
+		<sound path="start.wav" id="start" />
+		<sound path="first.wav" id="first" />
+		<sound path="second.wav" id="second" />
+		<sound path="third.wav" id="third" />
+		<sound path="fourth.wav" id="fourth" />
+		<sound path="fifth.wav" id="fifth" />
+		<sound path="sixth.wav" id="sixth" />
+	</assets>
+	
+	<!-- optimize output
+	<haxeflag name="-dce full" /> -->
+	
+</project>
